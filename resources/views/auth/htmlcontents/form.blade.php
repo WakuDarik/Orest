@@ -2,7 +2,6 @@
 @section('title', 'Редактировать товар '.$testhtml->page)
 
 @section('title', 'Создать товар')
-@endisset
 @section('content')
 <style>
     .more_img img {
