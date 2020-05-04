@@ -156,7 +156,6 @@
                             <div class="left-nav">
                                 {{-- <a href="/gallery/">Продажа</a> --}}
                                 {{-- <a href="{{route('ysloviya-arendi')}}">Условия аренды</a> --}}
-                                <a href="{{route('dostavka')}}">Доставка</a>
                                 {{-- <a href="{{ route('category', 'lesa-i-vyshki-tury') }}">Аренда лесов</a> --}}
                                 <form method="POST" id="search">@csrf <input autocomplete="off" type="search" name="q"
                                         placeholder="Я ищу">
@@ -164,6 +163,7 @@
                                 </form>
                             </div>
                             <div class="right-nav">
+                                <a href="{{route('dostavka')}}">Доставка</a>
 
                                 {{-- <a href="{{route('oplata')}}">Оплата</a> --}}
                                 {{-- <a href="/services/">Акции</a> --}}
