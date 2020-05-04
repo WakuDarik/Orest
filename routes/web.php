@@ -34,6 +34,7 @@ Route::group([
         Route::resource('categories', 'Admin\CategoryController');
         Route::resource('goods', 'Admin\ProdController');
         Route::resource('props', 'Admin\PropController');
+        Route::resource('texthtml', 'Admin\TesthtmlController');
     });
 });
 Route::get('/', 'MainController@index')->name('index');
