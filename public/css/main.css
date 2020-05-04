@@ -813,7 +813,7 @@ input[type="text"]:focus + span {
     width: 100%;
     align-items: center;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .contact-form {
     min-width: 320px;
