@@ -57,7 +57,7 @@
                             <div class="item">
                                 <div class="title">
                                     <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <span>На день</span> </div>
+                                    <span>Доба</span> </div>
                                 <div class="value">
                                     <span>{{$prod->rent1}}</span>
                                 </div>
@@ -89,7 +89,7 @@
                     <div class="item">
                         <div class="title">
                             <i class="fa fa-shield" aria-hidden="true"></i>
-                            <span>Залог</span> </div>
+                            <span>Заставна вартість</span> </div>
                         <div class="value">
                             <span>{{$prod->price}}</span>
                         </div>
