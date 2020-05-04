@@ -31,32 +31,23 @@
                     <div class="item">Заголовок</div>
                     <div class="item">Текст</div>
                     <div class="item">Действия</div>
-                    {{-- <div class="item">Действия</div>
-                    <div class="item">Действия</div> --}}
+
                     @foreach ($htmlcontents as $htmlcon)
                     <div class="item">{{ $htmlcon->id }}</div>
                     <div class="item">{{ $htmlcon->page }}</div>
                     <div class="item">{{ $htmlcon->descr }}</div>
                     <div class="item">{{ $htmlcon->title }}</div>
                     <div class="item">{{ $htmlcon->content }}</div>
-                    {{-- <div class="item"><a class="btn btn-success" href="{{ route('goods.show', $good) }}">Открыть</a>
-                </div> --}}
-                <div class="item"><a class="btn btn-success"
-                        href="{{ route('texthtml.edit', $htmlcon) }}">Редактировать</a></div>
-                {{-- <div class="item">
-                        <form method="POST" action="{{ route('goods.destroy', $good) }}">
-                @csrf
-                @method('DELETE')
-                <button class="btn" type="submit">УДАЛИТЬ</button>
-                </form>
-            </div> --}}
-            @endforeach
-        </div>
-        {{-- <div class="bottom">
+                    <div class="item"><a class="btn btn-success"
+                            href="{{ route('texthtml.edit', $htmlcon->id) }}">Редактировать</a></div>
+
+                    @endforeach
+                </div>
+                {{-- <div class="bottom">
                     <a class="btn btn-success" href="{{ route('goods.create') }}">Добавить новый товар</a>
-    </div> --}}
-</div>
-</div>
+            </div> --}}
+        </div>
+    </div>
 </div>
 </div>
 @endsection
