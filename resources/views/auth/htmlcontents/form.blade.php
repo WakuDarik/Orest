@@ -22,7 +22,7 @@
 
                     <h1>Редактировать текст {{ $testhtml->descr }}</h1>
                 </div>
-                <form method="POST" enctype="multipart/form-data" action="{{ route('texthtml.update', $testhtml) }}">
+                <form method="POST" enctype="multipart/form-data" action="{{ route('texthtmls.update', $testhtml) }}">
                     @csrf
                     @method('PUT')
 
