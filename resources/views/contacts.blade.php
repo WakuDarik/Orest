@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="row">
-            <h1 class="page-title" style="width:100%">{!! $html->firstWhere("loacte_code", 'title')->content !!}
+            <h1 class="page-title" style="width:100%">{!! $html->firstWhere("loacte_code", 'contacts')->title !!}
             </h1>
             <div class="contact-map">
                 <div class="info">
