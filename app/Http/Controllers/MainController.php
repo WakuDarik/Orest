@@ -20,9 +20,10 @@ class MainController extends Controller
     }
     public function showStatic(Request $request)
     {
+        $html = Texthtml::get();
         $path = $request->route()->getName();
         $categories = Category::get();
-        return view($path, compact('categories'));
+        return view($path, compact('categories', 'html'));
     }
     public function categories()
     {
