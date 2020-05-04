@@ -1,13 +1,13 @@
 @extends('layouts/master')
 
-@section('title', 'Аренда инструментов во Львове и Львовской области | '. $prod->name)
-@section('descr', 'Арендовать '.$prod->name.' на день по самым выгодным ценам во Львове и Львовской области.')
+@section('title', 'Оренда інструментів у Львові і Львівській області | '. $prod->name)
+@section('descr', 'Орендувати '.$prod->name.' на день за найвигіднішими цінами у Львові та Львівській області.')
 @section('content')
 
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="row">
-            <h1 class="prod-title">Арендовать {{$prod->name}}</h1>
+            <h1 class="prod-title">Орендувати {{$prod->name}}</h1>
         </div>
     </div>
     <div class="row">
@@ -38,7 +38,7 @@
                 <div class="zakaz-info">
                     <div class="zakaz-block">
                         <div class="caption">
-                            Заказывай <br>в аренду
+                            Замовляй <br>в оренду
                         </div>
                         <ul class="zakaz">
                             <li class="telegram"><a rel="nofollow" href="https://t.me/"><img
@@ -98,9 +98,9 @@
                 <div class="btns">
                     <a href="{{route('basket-add', $prod->id)}}"
                         data-title="Настольная циркулярная пила GTS 10 J Professional"
-                        class="btn btn-red popup-toggle reserv-show"><span>Арендовать</span></a>
-                    <a href="#" class="btn btn-success open-modal" data-modal="rent-now"><span>Арендовать
-                            сейчас</span></a>
+                        class="btn btn-red popup-toggle reserv-show"><span>Орендувати</span></a>
+                    <a href="#" class="btn btn-success open-modal" data-modal="rent-now"><span>Орендувати
+                            зараз</span></a>
                 </div>
             </div>
         </div>
@@ -110,15 +110,15 @@
                     <img class="" src="/tpl/images/oneclick.png" alt="">
                 </div>
                 <div class="descr">
-                    <div class="caption">Арендовать в один клик</div>
-                    <p>Укажите номер и менеджер перезвонит вам!</p>
+                    <div class="caption">Орендувати в один клік</div>
+                    <p>Вкажіть номер і менеджер перезвонить Вам!</p>
                 </div>
             </div>
             <div class="oneclick-form-block">
                 <form action="{{route('one-click-order', $prod->id)}}" method="post" id="ajax_form_one_click"
                     class="ajax_form_one_click oneclick-form ajax_form">
                     <input type="text" name="phone" id="phone-one-click" value="" placeholder="+38(0__) ___-__-__">
-                    <button type="submit">Отправить</button>
+                    <button type="submit">відправити</button>
                     @csrf
                 </form>
             </div>
@@ -126,7 +126,7 @@
         <div class="tabs-section">
             <div class="tabs-titles">
                 <div class="item active" data-tab="attr"><span>Характеристики</span></div>
-                <div class="item" data-tab="descr"><span>Описание</span></div>
+                <div class="item" data-tab="descr"><span>Опис</span></div>
                 {{-- <div class="item"><span>Инструкция</span></div> --}}
             </div>
             <div class="tabs-contents">
