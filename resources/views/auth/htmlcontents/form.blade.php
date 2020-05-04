@@ -1,7 +1,5 @@
 @extends('admin/master')
-@isset($testhtml)
-@section('title', 'Редактировать товар '.$testhtml->descr)
-@else
+@section('title', 'Редактировать товар '.$testhtml->page)
 
 @section('title', 'Создать товар')
 @endisset
@@ -22,16 +20,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    @isset($testhtml) <h1>Редактировать товар {{ $testhtml->name }}</h1> @else <h1>Добавить
-                        товар</h1> @endisset
+                    <h1>Редактировать текст {{ $testhtml->descr }}</h1>
                 </div>
-                <form method="POST" enctype="multipart/form-data" @isset($testhtml)
-                    action="{{ route('texthtml.update', $testhtml) }}" @else action="{{ route('goods.store') }}"
-                    @endisset>
+                <form method="POST" enctype="multipart/form-data" action="{{ route('texthtml.update', $testhtml) }}">
                     @csrf
-                    @isset($testhtml)
                     @method('PUT')
-                    @endisset
 
                     <div class="input-group row">
                         <label for="title" class="col-sm-2 col-form-label">Заголовок: </label>
@@ -48,8 +41,8 @@
                         <label for="content" class="col-sm-2 col-form-label">Текст
                         </label>
                         <div class="col-sm-6">
-                            <textarea name="content" class="form-control" id="content" style="width: 100%">@isset($testhtml) {{ $testhtml->content }} @endisset
-                            </textarea>
+                            <textarea name="content" class="form-control" id="content"
+                                style="width: 100%">{{$testhtml->content}}</textarea>
                         </div>
                     </div>
                     <button type="submit">Добавить</button>
