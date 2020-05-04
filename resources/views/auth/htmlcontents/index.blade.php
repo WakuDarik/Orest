@@ -39,12 +39,10 @@
                     <div class="item">{{ $htmlcon->descr }}</div>
                     <div class="item">{{ $htmlcon->title }}</div>
                     <div class="item">{{ $htmlcon->content }}</div>
-
                     {{-- <div class="item"><a class="btn btn-success" href="{{ route('goods.show', $good) }}">Открыть</a>
                 </div> --}}
-
-                <div class="item"><a class="btn btn-success" href="{{ route('index') }}">Редактировать</a></div>
-
+                <div class="item"><a class="btn btn-success"
+                        href="{{ route('texthtml.edit', $htmlcon) }}">Редактировать</a></div>
                 {{-- <div class="item">
                         <form method="POST" action="{{ route('goods.destroy', $good) }}">
                 @csrf

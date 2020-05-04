@@ -39,8 +39,8 @@
                     </div>
 
                     <div class="item"><a class="btn btn-success"
-                            href="{{ route('goods.edit', $good) }}">Редактировать</a></div>
-
+                            href="{{ route('goods.edit', $good) }}">Редактировать</a>
+                    </div>
                     <div class="item">
                         <form method="POST" action="{{ route('goods.destroy', $good) }}">
                             @csrf
