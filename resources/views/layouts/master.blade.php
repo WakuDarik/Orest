@@ -101,12 +101,6 @@
                 <div class="main-navigation">
                     <div class="phone-row hidden-md-up">
                         <ul class="zakaz">
-                            <li class="telegram"><a rel="nofollow" href="https://t.me/"
-                                    alt="Аренда Второй товар в telegram"><img src="{{Storage::url('ico/telegram.png')}}"
-                                        alt="Аренда Второй товар в вайбере"></a></li>
-                            <li class="viber"><a rel="nofollow" href="viber://chat?number=%2B380969292020"><img
-                                        src="{{Storage::url('ico/viber.png')}}" alt="Аренда Второй товар в вайбере"></a>
-                            </li>
                             <li class="phone">
                                 <a class="phone open-modal" data-modal="rent-now" href="">
                                     <svg class="bi bi-phone" width="1em" height="1em" viewBox="0 0 16 16"
@@ -119,6 +113,15 @@
                                     </svg>
                                 </a>
                             </li>
+
+                            <li class="viber"><a rel="nofollow" href="viber://chat?number=%2B380969292020"><img
+                                        src="{{Storage::url('ico/viber.png')}}" alt="Аренда Второй товар в вайбере"></a>
+                            </li>
+
+                            <li class="telegram"><a rel="nofollow" href="https://t.me/"
+                                    alt="Аренда Второй товар в telegram"><img src="{{Storage::url('ico/telegram.png')}}"
+                                        alt="Аренда Второй товар в вайбере"></a></li>
+
                             <li class="bascket">
                                 <a class="bascket" href="{{ route('basket') }}">
                                     <svg class="bi bi-bucket-fill" height="auto" width="2em" viewBox="0 0 16 16"
