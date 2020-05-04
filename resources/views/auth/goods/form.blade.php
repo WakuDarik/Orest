@@ -152,6 +152,10 @@
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({selector:'textarea'});
+</script>
 <script>
     $(function() {
         $('#categories_select').on('change',function(){

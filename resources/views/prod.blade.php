@@ -145,7 +145,7 @@
                     @endforeach
                 </div>
                 <div class="item descr">
-                    {{$prod->description}}
+                    {!! $prod->description !!}
                 </div>
             </div>
         </div>
