@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="title">
-                    <h1>Прокат інструменту в Львові і області</h1>
+                    <h1>Прокат ІНСТРУМЕНТУ у Львові та області</h1>
                 </div>
                 <section class="img-catalog">
                     <div class="kategory-list gray-over show">
