@@ -14,6 +14,11 @@
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
     }
+
+    .grid>div:nth-child(6*2) {
+        overflow: auto;
+        max-height: 200px;
+    }
 </style>
 <div class="content">
     <div class="container">
