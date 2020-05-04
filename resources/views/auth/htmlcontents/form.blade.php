@@ -1,6 +1,6 @@
 @extends('admin/master')
-@isset($htmlcon)
-@section('title', 'Редактировать товар '.$htmlcon->descr)
+@isset($testhtml)
+@section('title', 'Редактировать товар '.$testhtml->descr)
 @else
 
 @section('title', 'Создать товар')
@@ -22,13 +22,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    @isset($htmlcon) <h1>Редактировать товар {{ $htmlcon->name }}</h1> @else <h1>Добавить
+                    @isset($testhtml) <h1>Редактировать товар {{ $testhtml->name }}</h1> @else <h1>Добавить
                         товар</h1> @endisset
                 </div>
-                <form method="POST" enctype="multipart/form-data" @isset($htmlcon)
-                    action="{{ route('goods.update', $htmlcon) }}" @else action="{{ route('goods.store') }}" @endisset>
+                <form method="POST" enctype="multipart/form-data" @isset($testhtml)
+                    action="{{ route('goods.update', $testhtml) }}" @else action="{{ route('goods.store') }}" @endisset>
                     @csrf
-                    @isset($htmlcon)
+                    @isset($testhtml)
                     @method('PUT')
                     @endisset
 
@@ -39,7 +39,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                             <input type="text" class="form-control" name="title" id="title"
-                                value="{{ old('title', isset($htmlcon) ? $htmlcon->title : null) }}">
+                                value="{{ old('title', isset($testhtml) ? $testhtml->title : null) }}">
                         </div>
                     </div>
 
@@ -47,7 +47,7 @@
                         <label for="content" class="col-sm-2 col-form-label">Текст
                         </label>
                         <div class="col-sm-6">
-                            <textarea name="content" class="form-control" id="content" style="width: 100%">@isset($htmlcon) {{ $htmlcon->content }} @endisset
+                            <textarea name="content" class="form-control" id="content" style="width: 100%">@isset($testhtml) {{ $testhtml->content }} @endisset
                             </textarea>
                         </div>
                     </div>
