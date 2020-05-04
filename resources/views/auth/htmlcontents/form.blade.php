@@ -26,7 +26,7 @@
                         товар</h1> @endisset
                 </div>
                 <form method="POST" enctype="multipart/form-data" @isset($testhtml)
-                    action="{{ route('testhtml.update', $testhtml) }}" @else action="{{ route('goods.store') }}"
+                    action="{{ route('texthtml.update', $testhtml) }}" @else action="{{ route('goods.store') }}"
                     @endisset>
                     @csrf
                     @isset($testhtml)
