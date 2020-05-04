@@ -27,7 +27,7 @@ class BasketController extends Controller
     {
         $categories = Category::get();
 
-        return view('order', 'categories');
+        return view('order');
     }
 
     public function confirm(Request $request)
