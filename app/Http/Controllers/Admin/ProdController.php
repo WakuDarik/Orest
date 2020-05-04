@@ -110,7 +110,7 @@ class ProdController extends Controller
 
         $categories = $good->category;
         $props = $good->propsProds()->get();
-        
+
         return view('auth.goods.form', compact('good', 'categories', 'props'));
     }
 

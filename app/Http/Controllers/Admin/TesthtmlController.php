@@ -15,8 +15,8 @@ class TesthtmlController extends Controller
      */
     public function index()
     {
-        $htmlcontents = Testhtml::get();
-        return view('auth.htmlcontents.index', compact('htmlcontents'));
+        $testhtml = Testhtml::get();
+        return view('auth.htmlcontents.index', compact('testhtml'));
     }
 
     /**

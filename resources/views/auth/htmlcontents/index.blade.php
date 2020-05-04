@@ -39,8 +39,7 @@
                     <div class="item">{{ $htmlcon->title }}</div>
                     <div class="item">{{ $htmlcon->content }}</div>
                     <div class="item"><a class="btn btn-success"
-                            href="{{ route('texthtml.edit', $htmlcon->id) }}">Редактировать</a></div>
-
+                            href="{{ route('texthtml.edit', $htmlcon) }}">Редактировать</a></div>
                     @endforeach
                 </div>
                 {{-- <div class="bottom">
