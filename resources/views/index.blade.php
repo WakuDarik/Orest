@@ -2,7 +2,7 @@
 
 @section('title', 'Главная')
 @section('content')
-@dd($html->where('loacte_code', 'bottom_descr')->get('content')->first())
+
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="row">
@@ -54,7 +54,7 @@
             <div class="col-md-12">
                 <div class="wysiwyg">
                     <div class=" text-wrap">
-                        {!! $html->where("loacte_code", 'baner')->first()->content !!}
+                        {!! $html->where('loacte_code', 'bottom_descr')->get('content')->first() !!}
                     </div>
                     </span>
                 </div>
