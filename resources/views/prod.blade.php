@@ -99,8 +99,8 @@
                     <a href="{{route('basket-add', $prod->id)}}"
                         data-title="Настольная циркулярная пила GTS 10 J Professional"
                         class="btn btn-red popup-toggle reserv-show"><span>Орендувати</span></a>
-                    <a href="#" class="btn btn-success open-modal" data-modal="rent-now"><span>Орендувати
-                            зараз</span></a>
+                    <a href="#" class="btn btn-success open-modal" data-modal="rent-now"><span>Подзвонити
+                            менеджеру</span></a>
                 </div>
             </div>
         </div>
