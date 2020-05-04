@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Goods_Image;
 use App\Prods;
-use App\Testhtml;
+use App\Texthtml;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -15,7 +15,7 @@ class MainController extends Controller
     {
         $prods = Prods::get();
         $categories = Category::get();
-        $html = Testhtml::get();
+        $html = Texthtml::get();
         return view('index', compact('categories', 'prods', 'html'));
     }
     public function showStatic(Request $request)
