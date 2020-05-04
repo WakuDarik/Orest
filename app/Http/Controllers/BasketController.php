@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Order;
 use App\Prods;
 use Illuminate\Http\Request;
@@ -12,10 +13,11 @@ class BasketController extends Controller
 
     public function basket()
     {
+        $categories = Category::get();
         $orderId = session('orderId');
         if (!is_null($orderId)) {
             $order = Order::findOrFail($orderId);
-            return view('basket', compact('order'));
+            return view('basket', compact('order', 'categories'));
         } else {
             session()->flash('succsess', 'Корзина пуста');
             return redirect()->route('index');
@@ -23,11 +25,15 @@ class BasketController extends Controller
     }
     public function order()
     {
-        return view('order');
+        $categories = Category::get();
+
+        return view('order', 'categories');
     }
 
     public function confirm(Request $request)
     {
+        $categories = Category::get();
+
         $orderId = session('orderId');
         if (is_null($orderId)) {
             return redirect()->route('index');
