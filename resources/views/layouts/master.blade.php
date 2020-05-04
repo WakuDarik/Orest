@@ -158,7 +158,7 @@
                                 {{-- <a href="{{route('ysloviya-arendi')}}">Условия аренды</a> --}}
                                 {{-- <a href="{{ route('category', 'lesa-i-vyshki-tury') }}">Аренда лесов</a> --}}
                                 <form method="POST" id="search">@csrf <input autocomplete="off" type="search" name="q"
-                                        placeholder="Я ищу">
+                                        placeholder="Я шукаю">
                                     <div class="q-result"></div>
                                 </form>
                             </div>
