@@ -2,7 +2,7 @@
 
 @section('title', 'Главная')
 @section('content')
-
+@dd($html->firstWhere("loacte_code", 'baner'))
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="row">
