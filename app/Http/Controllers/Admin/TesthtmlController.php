@@ -59,7 +59,7 @@ class TesthtmlController extends Controller
      */
     public function edit(Testhtml $testhtml)
     {
-        //
+        return view('auth.htmlcontents.form', compact('testhtml'));
     }
 
     /**
