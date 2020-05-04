@@ -2,7 +2,7 @@
 
 @section('title', 'Главная')
 @section('content')
-@dd($html->get())
+@dd($html->where('loacte_code', 'bottom_descr')->get('content'))
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="row">
