@@ -32,14 +32,14 @@
                     <div class="item">Текст</div>
                     <div class="item">Действия</div>
 
-                    @foreach ($htmlcontents as $htmlcon)
-                    <div class="item">{{ $htmlcon->id }}</div>
-                    <div class="item">{{ $htmlcon->page }}</div>
-                    <div class="item">{{ $htmlcon->descr }}</div>
-                    <div class="item">{{ $htmlcon->title }}</div>
-                    <div class="item">{{ $htmlcon->content }}</div>
+                    @foreach ($texthtml as $testhtm)
+                    <div class="item">{{ $testhtm->id }}</div>
+                    <div class="item">{{ $testhtm->page }}</div>
+                    <div class="item">{{ $testhtm->descr }}</div>
+                    <div class="item">{{ $testhtm->title }}</div>
+                    <div class="item">{{ $testhtm->content }}</div>
                     <div class="item"><a class="btn btn-success"
-                            href="{{ route('texthtmls.edit', $htmlcon) }}">Редактировать</a></div>
+                            href="{{ route('texthtmls.edit', $testhtm) }}">Редактировать</a></div>
                     @endforeach
                 </div>
                 {{-- <div class="bottom">

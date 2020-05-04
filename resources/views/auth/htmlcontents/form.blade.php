@@ -18,11 +18,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    @dd($testhtml)
-
-                    <h1>Редактировать текст {{ $testhtml->descr }}</h1>
+                    <h1>Редактировать текст {{ $texthtml->descr }}</h1>
                 </div>
-                <form method="POST" enctype="multipart/form-data" action="{{ route('texthtmls.update', $testhtml) }}">
+                <form method="POST" enctype="multipart/form-data" action="{{ route('texthtmls.update', $texthtml) }}">
                     @csrf
                     @method('PUT')
 
@@ -33,7 +31,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                             <input type="text" class="form-control" name="title" id="title"
-                                value="{{ old('title', isset($testhtml) ? $testhtml->title : null) }}">
+                                value="{{ old('title', isset($texthtml) ? $texthtml->title : null) }}">
                         </div>
                     </div>
 
@@ -42,7 +40,7 @@
                         </label>
                         <div class="col-sm-6">
                             <textarea name="content" class="form-control" id="content"
-                                style="width: 100%">{{$testhtml->content}}</textarea>
+                                style="width: 100%">{{$texthtml->content}}</textarea>
                         </div>
                     </div>
                     <button type="submit">Добавить</button>
