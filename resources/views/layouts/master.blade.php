@@ -54,7 +54,7 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <span class="value">Львівська олб.<br />Скнилов-Сокольники</span>
+                        <span class="value">Львівська олб.<br />Скнилів-Сокільники</span>
                     </a>
                     <div class="header-link">
                         <ul class="zakaz">
