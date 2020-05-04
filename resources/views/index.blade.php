@@ -25,13 +25,7 @@
                     <div class="inner " style="margin-bottom: 20px;">
                         <div class=""
                             style="background: #ef0001;color: #fff;padding: 10px 0px;text-align: center;float: left;width: 100%;margin: 0 0 10px 0;">
-                            <p style="margin: 0;padding: 10px;">НАША ВІДПОВІДЬ COVID-19
-                                Карантин — не канікули. Для нас це час викликів та ідей, що змінюють світ.
-                                Ми працюємо для ВАС, щоб якомога швидше адаптуватися до нових реалій.
-                                Адже у нас є мета — допомагати українцям долати цю кризу у цей буремний час.
-                                График работы отделений в праздничные дни: 1.05 и 2.05 – с 9:00 до 15:00;
-                                9.05 и 10.05 – выходной.
-                            </p>
+                            {!! $html->where("loacte_code", 'baner')->content !!}
                         </div>
                     </div>
                 </div>
