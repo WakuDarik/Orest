@@ -26,7 +26,7 @@
                     <div class="inner " style="margin-bottom: 20px;">
                         <div class=""
                             style="background: #ef0001;color: #fff;padding: 10px 0px;text-align: center;float: left;width: 100%;margin: 0 0 10px 0;">
-                            {!! $html->where("loacte_code", 'baner')->limit(1)->content !!}
+                            {!! $html->firstWhere("loacte_code", 'baner')->content !!}
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
             <div class="col-md-12">
                 <div class="wysiwyg">
                     <div class=" text-wrap">
-                        {!! $html->where('loacte_code', 'bottom_descr')->limit(1)->content !!}
+                        {!! $html->firstWhere('loacte_code', 'bottom_descr')->content !!}
                     </div>
                     </span>
                 </div>
