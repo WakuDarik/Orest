@@ -1,5 +1,6 @@
 @extends('admin/master')
 @isset($good)
+@dd($good)
 @section('title', 'Редактировать товар '.$good->name)
 @else
 
