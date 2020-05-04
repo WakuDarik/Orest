@@ -71,7 +71,7 @@ class TesthtmlController extends Controller
      */
     public function update(Request $request, Testhtml $testhtml)
     {
-        //
+        return view('auth.htmlcontents.form', compact('testhtml'));
     }
 
     /**
