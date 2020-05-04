@@ -15,7 +15,7 @@ class MainController extends Controller
     {
         $prods = Prods::get();
         $categories = Category::get();
-        $html = Testhtml::where('page_code', 'index');
+        $html = Testhtml::get();
         return view('index', compact('categories', 'prods', 'html'));
     }
     public function showStatic(Request $request)
