@@ -1,6 +1,5 @@
 @extends('admin/master')
-@section('title', 'Редактировать товар '.$testhtml->page)
-@dd($testhtml)
+@section('title', 'Редактировать товар')
 @section('title', 'Создать товар')
 @section('content')
 <style>
@@ -19,6 +18,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
+                    @dd($testhtml)
+
                     <h1>Редактировать текст {{ $testhtml->descr }}</h1>
                 </div>
                 <form method="POST" enctype="multipart/form-data" action="{{ route('texthtml.update', $testhtml) }}">
