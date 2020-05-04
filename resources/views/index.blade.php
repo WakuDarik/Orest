@@ -7,7 +7,7 @@
         <div class="row">
             <aside class="col-md-3 sidebar hidden-sm-down">
                 <div class="kategory-sidebar item">
-                    <h2 class="kategory-title"> <span>Каталог оборудования</span> </h2>
+                    <h2 class="kategory-title"> <span>Каталог обладнання</span> </h2>
                     <ul class="kategorien-list">
                         @foreach($categories as $category)
                         <li class="last">
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="title">
-                    <h1>Прокат инструмента в Киеве</h1>
+                    <h1>Прокат інструменту в Львові і області</h1>
                 </div>
                 <section class="img-catalog">
                     <div class="kategory-list gray-over show">

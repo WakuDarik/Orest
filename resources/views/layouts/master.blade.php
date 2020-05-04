@@ -54,7 +54,7 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <span class="value">Львовская олб.<br />Скнилов-Сокольники</span>
+                        <span class="value">Львівська олб.<br />Скнилов-Сокольники</span>
                     </a>
                     <div class="header-link">
                         <ul class="zakaz">
@@ -140,7 +140,7 @@
                                 <a href="/" class="logo ">
                                     <img src="{{Storage::url('ico/logo-new.png')}}" alt="">
                                 </a>
-                                <h3 class="kategory-title"> <span>Каталог оборудования</span> </h3>
+                                <h3 class="kategory-title"> <span>Каталог обладнання</span> </h3>
                                 <ul class="kategorien-list">
                                     @foreach($categories as $category)
                                     <li class="last">
@@ -155,18 +155,19 @@
 
                             <div class="left-nav">
                                 {{-- <a href="/gallery/">Продажа</a> --}}
-                                <a href="{{route('ysloviya-arendi')}}">Условия аренды</a>
-                                <a href="{{ route('category', 'lesa-i-vyshki-tury') }}">Аренда лесов</a>
+                                {{-- <a href="{{route('ysloviya-arendi')}}">Условия аренды</a> --}}
+                                <a href="{{route('dostavka')}}">Доставка</a>
+                                {{-- <a href="{{ route('category', 'lesa-i-vyshki-tury') }}">Аренда лесов</a> --}}
                                 <form method="POST" id="search">@csrf <input autocomplete="off" type="search" name="q"
                                         placeholder="Я ищу">
                                     <div class="q-result"></div>
                                 </form>
                             </div>
                             <div class="right-nav">
-                                <a href="{{route('dostavka')}}">Доставка</a>
-                                <a href="{{route('oplata')}}">Оплата</a>
+
+                                {{-- <a href="{{route('oplata')}}">Оплата</a> --}}
                                 {{-- <a href="/services/">Акции</a> --}}
-                                <a href="{{route('contacts')}}">Контакты</a>
+                                <a href="{{route('contacts')}}">Контакти</a>
                             </div>
                         </div>
 
@@ -190,12 +191,13 @@
     @yield('content')
 
     <footer id="footer"> <i class="car-delivery"><a href="dostavka.html"></a></i>
-        <div class="inner"> <span class="copy">©2020, Будпрокат. Все права защищены.</span>
+        <div class="inner"> <span class="copy">Прокат інструментів у Львові (будівельна техніка, садова техніка,
+                клінінгова техніка) ©2020</span>
             <nav>
-                <a href="{{route('ysloviya-arendi')}}">Условия аренды</a>
+                {{-- <a href="{{route('ysloviya-arendi')}}">Условия аренды</a> --}}
                 <a href="{{route('dostavka')}}">Доставка</a>
-                <a href="{{route('oplata')}}">Оплата</a>
-                <a href="{{route('contacts')}}">Контакты</a>
+                {{-- <a href="{{route('oplata')}}">Оплата</a> --}}
+                <a href="{{route('contacts')}}">Контакти</a>
             </nav>
         </div>
     </footer>
