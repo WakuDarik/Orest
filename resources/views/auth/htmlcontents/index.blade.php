@@ -15,7 +15,7 @@
         border-bottom: 1px solid #fff;
     }
 
-    .grid>div:nth-child(6*2) {
+    .grid>div:nth-child(6n+6) {
         overflow: auto;
         max-height: 200px;
     }
