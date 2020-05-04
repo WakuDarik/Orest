@@ -15,10 +15,9 @@
         border-bottom: 1px solid #fff;
     }
 
-    .grid>div:nth-child(5n+5) {
+    .grid>div {
         max-height: 200px;
-        overflow-x: auto;
-
+        overflow: auto;
     }
 </style>
 <div class="content">
