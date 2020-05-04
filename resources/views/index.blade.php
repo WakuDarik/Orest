@@ -53,6 +53,7 @@
             <div class="col-md-12">
                 <div class="wysiwyg">
                     <div class=" text-wrap">
+                        @dd($html->where("loacte_code", 'bottom_descr')->first()->content)
                         {!! $html->where("loacte_code", 'bottom_descr')->first()->content !!}
                     </div>
                     </span>
