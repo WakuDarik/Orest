@@ -1,6 +1,6 @@
 @extends('admin/master')
 @section('title', 'Редактировать товар '.$testhtml->page)
-
+@dd($testhtml)
 @section('title', 'Создать товар')
 @section('content')
 <style>
