@@ -39,7 +39,7 @@
             <a href="{{ route('categories.index') }}">Категории</a>
             <a href="{{ route('props.index') }}">Свойства</a>
             <a href="{{ route('goods.index') }}">Товары</a>
-            <a href="{{ route('texthtml.index') }}">Контент страниц</a>
+            <a href="{{ route('texthtmls.index') }}">Контент страниц</a>
             @guest
             <a href="{{ route('login') }}"> Войти </a>
             <a href="{{ route('register') }}"> Регистрация </a>
