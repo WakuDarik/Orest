@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="product-info">
-                    <p>Артикул: 00248</p>
+                    <p>Артикул: {{$prod->articul}}</p>
                     <div class="price-wrap">
                         <div class="price-table">
                             <div class="item">
