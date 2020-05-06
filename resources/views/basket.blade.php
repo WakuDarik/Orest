@@ -1,6 +1,6 @@
 @extends('layouts/master')
 
-@section('title', 'Корзина ')
+@section('title', 'Оренда інструментів у Львові і Львівській області | Корзина ')
 
 @section('content')
 <div class="container">

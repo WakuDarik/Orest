@@ -1,6 +1,6 @@
 @extends('layouts/master')
 
-@section('title', 'Аренда инструментов во Львове и Львовской области | Доставка от 100 грн.')
+@section('title', 'Оренда інструментів у Львові і Львівській області | Доставка від 100 грн.')
 @section('content')
 <div class="container-fluid">
     <div class="col-md-12">

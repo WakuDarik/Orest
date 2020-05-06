@@ -1,6 +1,6 @@
 @extends('layouts/master')
 
-@section('title', 'Категория ' . $category->name)
+@section('title', 'Оренда інструментів у Львові і Львівській області | Категорія ' . $category->name)
 
 @section('content')
 

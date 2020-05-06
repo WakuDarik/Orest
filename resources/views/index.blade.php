@@ -1,6 +1,6 @@
 @extends('layouts/master')
 
-@section('title', 'Главная')
+@section('title', 'Прокат та оренда інструменту у Львові')
 @section('content')
 <div class="container-fluid">
     <div class="col-md-12">

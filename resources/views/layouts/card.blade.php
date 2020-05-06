@@ -19,9 +19,8 @@
             <span style="" class="price">
                 <strong style="font-size: 16px;"> {{$prod->rent1}}</strong> грн</span>
             <a style="" href="{{route('basket-add', $prod->id)}}" data-title="{{$prod->name}}"
-                class="btn btn-blue popup-toggle reserv-show">Арендовать</a>
-            <a href="#" class="btn btn-success open-modal" data-modal="rent-now"><span>Арендовать
-                    сейчас</span></a>
+                class="btn btn-blue popup-toggle reserv-show">Орендувати</a>
+            <a href="#" class="btn btn-success open-modal" data-modal="rent-now"><span>Набрати менеджера</span></a>
         </div>
     </div>
 </div>
