@@ -117,8 +117,7 @@
             <div class="oneclick-form-block">
                 <form action="{{route('one-click-order', $prod->id)}}" method="post" id="ajax_form_one_click"
                     class="ajax_form_one_click oneclick-form ajax_form">
-                    <input type="text" name="phone" id="phone-one-click" value=""
-                        placeholder="Введіть Ваш номер телефону">
+                    <input type="text" name="phone" id="phone-one-click" value="" placeholder="Ваш номер телефону">
                     <button type="submit">відправити</button>
                     @csrf
                 </form>
