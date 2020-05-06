@@ -38,7 +38,7 @@
                 <div class="zakaz-info">
                     <div class="zakaz-block">
                         <div class="caption">
-                            Замовляй <br>в оренду
+                            Замовляй <br />в Прокат
                         </div>
                         <ul class="zakaz">
                             <li class="telegram"><a rel="nofollow" href="https://t.me/"><img
@@ -117,7 +117,8 @@
             <div class="oneclick-form-block">
                 <form action="{{route('one-click-order', $prod->id)}}" method="post" id="ajax_form_one_click"
                     class="ajax_form_one_click oneclick-form ajax_form">
-                    <input type="text" name="phone" id="phone-one-click" value="" placeholder="+38(0__) ___-__-__">
+                    <input type="text" name="phone" id="phone-one-click" value=""
+                        placeholder="Введіть Ваш номер телефону">
                     <button type="submit">відправити</button>
                     @csrf
                 </form>
