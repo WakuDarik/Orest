@@ -6,15 +6,15 @@
 <div class="container">
     <div class="starter-template">
         <h1>Корзина</h1>
-        <p>Оформление заказа</p>
+        <p>Оформлення замовлення</p>
         <div class="panel">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Название</th>
-                        <th>Кол-во</th>
-                        <th>Цена</th>
-                        <th>Стоимость</th>
+                        <th>Назва</th>
+                        <th>Кл-сть</th>
+                        <th>Ціна</th>
+                        <th>Вартість</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,15 +46,15 @@
                     @endforeach
 
                     <tr>
-                        <td colspan="3">Общая стоимость:</td>
+                        <td colspan="3">Загальна вартість:</td>
                         <td>{{ $order->getFullPrice() }} ₽</td>
                     </tr>
                 </tbody>
             </table>
             <br>
             <div class="btn-group pull-right" role="group">
-                <a type="button" class="btn btn-success" href="{{ route('order') }}">Оформить
-                    заказ</a>
+                <a type="button" class="btn btn-success" href="{{ route('order') }}">Оформити
+                    замовлення</a>
             </div>
         </div>
     </div>
