@@ -15,6 +15,7 @@ class Prop extends Model
     {
         return $this->belongsToMany(Prods::class)->withPivot('unit')->withTimestamps();
     }
+    
     public function categories()
     {
         return $this->belongsToMany(Category::class)->withPivot('category_id');;

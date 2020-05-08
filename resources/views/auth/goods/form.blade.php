@@ -16,7 +16,12 @@
         width: 920px !important;
         height: 500px !important;
     }
+
+    input.form-control {
+        width: auto;
+    }
 </style>
+{{-- @dd($propsGood) --}}
 <div class="content">
     <div class="container">
         <div class="row">
@@ -109,11 +114,13 @@
                         <h3 class="col-md-12">Свойства</h3>
                         <div class="props-wrap">
                             @foreach ($props as $prop)
+                            {{-- @dd($good->propsProds->firstWhere('id', $prop->id)->pivot->unit) --}}
+
                             <div class="prop-wrap">
                                 <label class="col-sm-2 col-form-label">{{ $prop->name }}</label>
                                 <div class="col-sm-6">
                                     <input type="text" name="unit[{{$prop->id}}]" class="form-control"
-                                        value="@isset($good) {{$prop->pivot->unit}} @endisset">
+                                        value="@isset($good)@if(isset($good->propsProds->firstWhere('id', $prop->id)->pivot->unit) && !empty($good->propsProds->firstWhere('id', $prop->id)->pivot->unit)){{$good->propsProds->firstWhere('id', $prop->id)->pivot->unit}}@endif @endisset">
                                 </div>
                             </div>
                             @endforeach
