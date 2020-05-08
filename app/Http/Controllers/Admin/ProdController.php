@@ -148,9 +148,9 @@ class ProdController extends Controller
 
         foreach ($request->input('unit') as $key => $value) {
             $prop = Prop::findOrFail($key);
+            $prop->prodsProps()->sync($good, ['unit' => $value]);
             $prop->prodsProps()->updateExistingPivot($good, ['unit' => $value]);
         }
-
         return redirect()->route('goods.index');
     }
 
