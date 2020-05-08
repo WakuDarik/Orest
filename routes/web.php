@@ -33,6 +33,7 @@ Route::group([
         Route::get('/orders/{order}', 'Admin\HomeController@show')->name('order-show');
         Route::resource('categories', 'Admin\CategoryController');
         Route::resource('goods', 'Admin\ProdController');
+        Route::get('props/sort', 'Admin\PropController@sort')->name('props.sort');
         Route::resource('props', 'Admin\PropController');
         Route::resource('texthtmls', 'Admin\TexthtmlController');
     });

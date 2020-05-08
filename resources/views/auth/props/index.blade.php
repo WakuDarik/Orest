@@ -19,6 +19,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <form action="{{route('props.sort')}}" method="get">
+                    @csrf
+                    <legend> Групировать по категории</legend>
+                    <select name="category" id="category">
+                        @foreach ($categories as $categori)
+                        <option value="{{$categori->id}}">{{$categori->name}}</option>
+                        @endforeach
+                    </select>
+                    <button type="submit" class="btn">Групировать</button>
+                </form>
                 <div class="grid">
                     <div class="item">#</div>
                     <div class="item">Название</div>

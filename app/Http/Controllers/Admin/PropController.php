@@ -60,9 +60,9 @@ class PropController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Prop $prop)
+    public function show(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
@@ -110,5 +110,14 @@ class PropController extends Controller
         $prop->prodsProps()->wherePivot('prop_id', $prop->id)->detach();
         $prop->delete();
         return redirect()->route('props.index');
+    }
+
+    public function sort(Request $request)
+    {
+        $categories = Category::get();
+        $category = Category::firstWhere('id', $request->category);
+        $props = $category->props;
+        return view('auth.props.index', compact('props', 'categories'));
+        // dd($props);
     }
 }
