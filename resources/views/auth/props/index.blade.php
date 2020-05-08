@@ -21,8 +21,13 @@
             <div class="col-md-12">
                 <form action="{{route('props.sort')}}" method="get">
                     @csrf
-                    <legend> Групировать по категории</legend>
+                    <legend> @isset($categorynow)
+                        Сгрупировано по категории <b>{{$categorynow->name}}</b>
+                        @else
+                        Групировать по категории
+                        @endisset </legend>
                     <select name="category" id="category">
+                        <option value="NULL">Все свойства</option>
                         @foreach ($categories as $categori)
                         <option value="{{$categori->id}}">{{$categori->name}}</option>
                         @endforeach

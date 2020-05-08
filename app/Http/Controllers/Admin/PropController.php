@@ -114,10 +114,15 @@ class PropController extends Controller
 
     public function sort(Request $request)
     {
-        $categories = Category::get();
-        $category = Category::firstWhere('id', $request->category);
-        $props = $category->props;
-        return view('auth.props.index', compact('props', 'categories'));
+        if ($request->category == 'NULL') {
+            return redirect()->route('props.index');
+        } else {
+            $categories = Category::get();
+            $categorynow = Category::firstWhere('id', $request->category);
+            $props = $categorynow->props;
+            return view('auth.props.index', compact('props', 'categorynow', 'categories'));
+        }
+
         // dd($props);
     }
 }
