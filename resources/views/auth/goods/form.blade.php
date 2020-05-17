@@ -16,10 +16,6 @@
         width: 920px !important;
         height: 500px !important;
     }
-
-    input.form-control {
-        width: auto;
-    }
 </style>
 {{-- @dd($propsGood) --}}
 <div class="content">
