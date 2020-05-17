@@ -24,7 +24,7 @@
 
                     <div class="input-group row">
                         <label for="">Название</label>
-                        <input type="text" name="name" 
+                        <input type="text" name="name"
                             value="{{ old('name', isset($category) ? $category->name  : null) }}">
                     </div>
 
@@ -33,6 +33,22 @@
                             </textarea>
                     </div>
 
+                    <div class="input-group row">
+                        <label for="">meta Заголовок</label>
+                        <input type="text" name="meta_t"
+                            value="{{ old('meta_t', isset($category) ? $category->meta_t  : null) }}">
+                    </div>
+
+                    <div class="input-group row">
+                        <label for="">meta Ключи (через запятую)</label>
+                        <input type="text" name="meta_k"
+                            value="{{ old('meta_k', isset($category) ? $category->meta_k  : null) }}">
+                    </div>
+
+                    <div class="input-group row"><label for="">meta Описание</label><textarea name="meta_d" id=""
+                            cols="30" rows="10">{{ old('meta_d', isset($category) ? $category->meta_d  : null) }}
+                        </textarea>
+                    </div>
                     <div class="input-group row"><label>Картинка<input type="file" name="iamge"></label>
                     </div>
                     <button type="submit">Добавить</button>

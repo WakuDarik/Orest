@@ -11,6 +11,9 @@ class Category extends Model
         'code',
         'description',
         'iamge',
+        'meta_t',
+        'meta_k',
+        'meta_d',
     ];
     public function prods()
     {

@@ -1,6 +1,10 @@
 @extends('layouts/master')
 
-@section('title', 'Оренда інструментів у Львові і Львівській області | Категорія ' . $category->name)
+@section('title', $category->meta_t ? $category->meta_t : 'Оренда інструментів у Львові і Львівській області | Категорія
+' . $category->name)
+@section('keywords', $category->meta_k ? $category->meta_k : 'Оренда інструментів, Інструмент у Львові і Львівській
+області, Оренда ' . $category->name)
+@section('descr', $category->meta_d ? $category->meta_d : null)
 
 @section('content')
 
