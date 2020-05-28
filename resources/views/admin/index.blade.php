@@ -24,7 +24,7 @@
                     <div class="item">{{ $order->getFullPrice() }}</div>
                     <div class="item"><a href="{{route('order-show', $order)}}"> Показать </a></div>
                     <div class="item">
-                        <form method="POST" action="{{ route('order-delete', $order)) }}">
+                        <form method="POST" action="{{route('order-delete', $order)}}">
                             @csrf
                             @method('DELETE')
                             <button class="btn" type="submit">ВИДАЛИТИ</button>
