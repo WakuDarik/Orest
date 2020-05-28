@@ -32,7 +32,6 @@
 </head>
 
 <body>
-    {{session('orderId')}}
 
     <header>
         <div class="container-fluid">
