@@ -15,3 +15,4 @@ class Goods_Image extends Model
         return $this->belongsTo(Prods::class);
     }
 }
+

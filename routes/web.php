@@ -38,6 +38,8 @@ Route::group([
         Route::resource('texthtmls', 'Admin\TexthtmlController');
     });
 });
+
+
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/ysloviya-arendi', 'MainController@showStatic')->name('ysloviya-arendi');
 Route::get('/oplata', 'MainController@showStatic')->name('oplata');

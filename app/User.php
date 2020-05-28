@@ -42,3 +42,4 @@ class User extends Authenticatable
         return $this->is_admin == 1;
     }
 }
+

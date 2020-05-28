@@ -19,10 +19,7 @@ class Order extends Model
         }
         return $sum;
     }
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);   
-    // }
+
     public function saveOrder($name, $phone)
     {
         if ($this->status == 0) {

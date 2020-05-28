@@ -40,7 +40,6 @@ class MainController extends Controller
     {
         $prod = Prods::where('code', $prod)->first();
         $categories = Category::get();
-
         return view('prod', compact('prod', 'categories'));
     }
 

@@ -26,7 +26,6 @@ class BasketController extends Controller
     public function order()
     {
         $categories = Category::get();
-
         return view('order', compact('categories'));
     }
 
@@ -73,6 +72,8 @@ class BasketController extends Controller
         session()->flash('succsess', 'Добавлен товар: ' . $goods->name);
         return redirect()->route('basket');
     }
+
+    
     public function oneClickOrder(Request $request, $goodsId)
     {
         $orderId = session('orderId');

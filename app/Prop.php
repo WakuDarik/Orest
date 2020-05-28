@@ -21,3 +21,4 @@ class Prop extends Model
         return $this->belongsToMany(Category::class)->withPivot('category_id');;
     }
 }
+

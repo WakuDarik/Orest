@@ -10,3 +10,4 @@ class Texthtml extends Model
         'title', 'content',
     ];
 }
+

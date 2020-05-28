@@ -18,7 +18,7 @@ class administrator
     {
         $user = Auth::user();
         if (!$user->is_admin()) {
-            session()->flash('succsess', 'Нет прав доступа');
+            session()->flash('succsess', 'Нема прав доступу');
             return redirect()->route('index');
         }
         return $next($request);

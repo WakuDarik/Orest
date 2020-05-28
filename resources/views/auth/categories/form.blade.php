@@ -38,7 +38,10 @@
                         <input type="text" name="meta_t"
                             value="{{ old('meta_t', isset($category) ? $category->meta_t  : null) }}">
                     </div>
-
+                    <div class="input-group row">
+                        <label for="">Заголовок H1</label>
+                        <input type="text" name="H1" value="{{ old('H1', isset($category) ? $category->H1  : null) }}">
+                    </div>
                     <div class="input-group row">
                         <label for="">meta Ключи (через запятую)</label>
                         <input type="text" name="meta_k"

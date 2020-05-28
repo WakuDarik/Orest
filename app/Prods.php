@@ -19,10 +19,7 @@ class Prods extends Model
         'rent4',
         'iamge',
     ];
-    // public function getCategory()
-    // {
-    //     return $category = Category::find($this->category_id);
-    // }
+
     public function category()
     {
         return $this->belongsTo(Category::class);
