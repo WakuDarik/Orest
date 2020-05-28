@@ -39,6 +39,6 @@ class HomeController extends Controller
 
         $order->prods()->wherePivot('order_id', $order->id)->detach();
         $order->delete();
-        return redirect()->route('admin.index');
+        return redirect()->route('home');
     }
 }
