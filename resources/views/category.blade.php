@@ -28,7 +28,7 @@
             </aside>
             <div class="col-md-9">
                 <div class="title">
-                    <h1>{{$category->name}}</h1>
+                    <h1>{{$category->H1 ? $category->H1 : $category->name}}</h1>
                 </div>
                 <div class="wysiwyg no-border">
                     <div class="inner " style="margin-bottom: 20px;">
