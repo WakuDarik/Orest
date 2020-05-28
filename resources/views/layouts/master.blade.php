@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/touch-sideswipe.css">
-    {{@dump(session('orderId'))}}
     <style>
         * {
             box-sizing: border-box;
@@ -33,6 +32,7 @@
 </head>
 
 <body>
+    {{@dump(session('orderId'))}}
 
     <header>
         <div class="container-fluid">
