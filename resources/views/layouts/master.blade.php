@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    {{(session('orderId')}}
+    {{session('orderId')}}
 
     <header>
         <div class="container-fluid">
