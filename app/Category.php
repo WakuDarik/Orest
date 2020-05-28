@@ -12,6 +12,7 @@ class Category extends Model
         'description',
         'iamge',
         'meta_t',
+        'H1',
         'meta_k',
         'meta_d',
     ];
