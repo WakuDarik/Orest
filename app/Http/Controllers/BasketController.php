@@ -86,12 +86,14 @@ class BasketController extends Controller
         }
 
         if ($order->prods->contains($goodsId)) {
+
             $pivotRow = $order->prods()->where('prods_id', $goodsId)->first()->pivot;
             $pivotRow->count++;
             $pivotRow->update();
         } else {
             $order->prods()->attach($goodsId);
         }
+
         if (Auth::check()) {
             $order->user_id = Auth::id();
             $order->save();
@@ -99,7 +101,7 @@ class BasketController extends Controller
         $order = Order::find($orderId);
 
 
-        $succsess = $order->saveOrder($request->name = 'Быстрый заказ', $request->phone);
+        $succsess = $order->saveOrder('Быстрый заказ', $request->phone);
 
         if ($succsess) {
             session()->flash('succsess', 'Ваш заказ оброблюється');
