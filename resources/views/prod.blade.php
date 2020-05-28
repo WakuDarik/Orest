@@ -4,7 +4,7 @@
 $prod->name)
 @section('keywords', $prod->meta_k ? $prod->meta_k : 'Оренда інструментів, Інструмент у Львові і Львівській
 області, Оренда ' . $prod->name)
-@section('descr', $category->meta_d ? $category->meta_d : 'Орендувати '.$prod->name.' на день за найвигіднішими цінами у
+@section('descr', $prod->meta_d ? $prod->meta_d : 'Орендувати '.$prod->name.' на день за найвигіднішими цінами у
 Львові та Львівській області.')
 
 @section('content')
