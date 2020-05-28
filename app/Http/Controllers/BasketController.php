@@ -80,6 +80,7 @@ class BasketController extends Controller
         if (is_null($orderId)) {
             $order = Order::create();
             session(['orderId' => $order->id]);
+            $orderId = $order->id;
         } else {
             $order = Order::find($orderId);
         }
@@ -91,12 +92,12 @@ class BasketController extends Controller
         } else {
             $order->prods()->attach($goodsId);
         }
-        // if (Auth::check()) {
-        //     $order->user_id = Auth::id();
-        //     $order->save();
-        // }
-
+        if (Auth::check()) {
+            $order->user_id = Auth::id();
+            $order->save();
+        }
         $order = Order::find($orderId);
+
 
         $succsess = $order->saveOrder($request->name = 'Быстрый заказ', $request->phone);
 
