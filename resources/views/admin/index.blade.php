@@ -2,7 +2,21 @@
 
 @section('title', 'Заказы')
 @section('content')
+<style>
+    .grid {
+        grid-template-columns: repeat(7, auto);
+        display: grid;
+        border-top: 1px solid black;
+    }
 
+    .grid>div:nth-child(-n+7) {
+        height: auto;
+        background: #6e1600;
+        color: #fff;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+</style>
 <div class="content">
     <div class="container">
         <div class="row">
