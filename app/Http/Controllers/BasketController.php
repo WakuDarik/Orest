@@ -80,33 +80,30 @@ class BasketController extends Controller
         if (is_null($orderId)) {
             $order = Order::create();
             session(['orderId' => $order->id]);
-            $orderId = $order->id;
         } else {
             $order = Order::find($orderId);
         }
-        dd($order->prods());
-        if (($order->prods) && ($order->prods->contains($goodsId))) {
 
+        if ($order->prods->contains($goodsId)) {
             $pivotRow = $order->prods()->where('prods_id', $goodsId)->first()->pivot;
             $pivotRow->count++;
             $pivotRow->update();
         } else {
             $order->prods()->attach($goodsId);
         }
-
         if (Auth::check()) {
             $order->user_id = Auth::id();
             $order->save();
         }
+
         $order = Order::find($orderId);
 
-
-        $succsess = $order->saveOrder('Быстрый заказ', $request->phone);
+        $succsess = $order->saveOrder($request->name = 'Быстрый заказ', $request->phone);
 
         if ($succsess) {
-            session()->flash('succsess', 'Ваш заказ оброблюється');
+            session()->flash('succsess', 'Ваш заказ принят в обработку');
         } else {
-            session()->flash('warning', 'ВИНИКЛА ПОМИЛКА! Спробуйте ще раз.');
+            session()->flash('warning', 'This warning');
         }
         return redirect()->route('index');
     }
