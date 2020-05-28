@@ -91,10 +91,10 @@ class BasketController extends Controller
         } else {
             $order->prods()->attach($goodsId);
         }
-        if (Auth::check()) {
-            $order->user_id = Auth::id();
-            $order->save();
-        }
+        // if (Auth::check()) {
+        //     $order->user_id = Auth::id();
+        //     $order->save();
+        // }
 
         $order = Order::find($orderId);
 
