@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="title">
-                    <h1>Прокат ІНСТРУМЕНТУ у Львові та області</h1>
+                    <h1>{{$html->firstWhere('loacte_code', 'index_h1')->title}}</h1>
                 </div>
                 <section class="img-catalog">
                     <div class="kategory-list gray-over show">
