@@ -32,4 +32,13 @@ class HomeController extends Controller
     {
         return view('auth.orders.show', compact('order'));
     }
+
+    public function destroy(Order $order)
+    {
+        //dd($good->images()->get('iamge')->pluck('iamge')->all());
+
+        $order->prods()->wherePivot('order_id', $order->id)->detach();
+        $order->delete();
+        return redirect()->route('admin.index');
+    }
 }

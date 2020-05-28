@@ -31,6 +31,7 @@ Route::group([
     ], function () {
         Route::get('/order', 'Admin\HomeController@index')->name('home');
         Route::get('/orders/{order}', 'Admin\HomeController@show')->name('order-show');
+        Route::delete('/orders/{order}', 'Admin\HomeController@destroy')->name('order-delete');
         Route::resource('categories', 'Admin\CategoryController');
         Route::resource('goods', 'Admin\ProdController');
         Route::get('props/sort', 'Admin\PropController@sort')->name('props.sort');
