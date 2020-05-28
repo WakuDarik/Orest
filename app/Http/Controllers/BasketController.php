@@ -80,6 +80,7 @@ class BasketController extends Controller
         if (is_null($orderId)) {
             $order = Order::create();
             session(['orderId' => $order->id]);
+            $orderId = $order->id;
         } else {
             $order = Order::find($orderId);
         }
