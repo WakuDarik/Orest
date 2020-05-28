@@ -73,7 +73,7 @@ class BasketController extends Controller
         return redirect()->route('basket');
     }
 
-    
+
     public function oneClickOrder(Request $request, $goodsId)
     {
         $orderId = session('orderId');
@@ -99,11 +99,11 @@ class BasketController extends Controller
         $order = Order::find($orderId);
 
         $succsess = $order->saveOrder($request->name = 'Быстрый заказ', $request->phone);
-
+        dd($succsess);
         if ($succsess) {
             session()->flash('succsess', 'Ваш заказ принят в обработку');
         } else {
-            session()->flash('warning', 'This warning');
+            session()->flash('warning', 'ВИНИКЛА ПОМИЛКА! Спробуйте ще раз.');
         }
         return redirect()->route('index');
     }
