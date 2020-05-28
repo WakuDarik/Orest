@@ -18,6 +18,10 @@ class Prods extends Model
         'rent3',
         'rent4',
         'iamge',
+        'meta_t',
+        'H1',
+        'meta_k',
+        'meta_d',
     ];
 
     public function category()

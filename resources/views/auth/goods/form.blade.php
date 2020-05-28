@@ -133,6 +133,27 @@
                     </div>
 
                     <div class="input-group row">
+                        <label for="">meta Заголовок</label>
+                        <input type="text" name="meta_t"
+                            value="{{ old('meta_t', isset($good) ? $good->meta_t  : null) }}">
+                    </div>
+
+                    <div class="input-group row">
+                        <label for="">Заголовок H1</label>
+                        <input type="text" name="H1" value="{{ old('H1', isset($good) ? $good->H1  : null) }}">
+                    </div>
+
+                    <div class="input-group row">
+                        <label for="">meta Ключи (через запятую)</label>
+                        <input type="text" name="meta_k"
+                            value="{{ old('meta_k', isset($good) ? $good->meta_k  : null) }}">
+                    </div>
+
+                    <div class="input-group row"><label for="">meta Описание</label><textarea name="meta_d" id=""
+                            cols="30" rows="10">{{ old('meta_d', isset($good) ? $good->meta_d  : null) }}
+                        </textarea>
+                    </div>
+                    <div class="input-group row">
                         @isset($good)
                         <img src="{{Storage::url($good->iamge)}}" alt="" class="col-sm-12 col-form-label">
                         @endisset

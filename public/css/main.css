@@ -91,6 +91,9 @@ li.lang-item a {
     display: flex;
     flex-wrap: wrap;
 }
+.input-group.row img {
+    max-width: 300px;
+}
 .kategory-list .item {
     width: calc(23.333336% - 30px);
     padding: 0 15px;

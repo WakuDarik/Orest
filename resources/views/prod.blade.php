@@ -1,13 +1,18 @@
 @extends('layouts/master')
 
-@section('title', 'Оренда інструментів у Львові і Львівській області | Орендувати '. $prod->name)
-@section('descr', 'Орендувати '.$prod->name.' на день за найвигіднішими цінами у Львові та Львівській області.')
+@section('title', $prod->meta_t ? $prod->meta_t : 'Оренда інструментів у Львові і Львівській області | Орендувати '.
+$prod->name)
+@section('keywords', $prod->meta_k ? $prod->meta_k : 'Оренда інструментів, Інструмент у Львові і Львівській
+області, Оренда ' . $prod->name)
+@section('descr', $category->meta_d ? $category->meta_d : 'Орендувати '.$prod->name.' на день за найвигіднішими цінами у
+Львові та Львівській області.')
+
 @section('content')
 
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="row">
-            <h1 class="prod-title">Орендувати {{$prod->name}}</h1>
+            <h1 class="prod-title">@isset($prod->H1) {{$prod->H1}} @else Орендувати {{$prod->name}} @endisset</h1>
         </div>
     </div>
     <div class="row">
