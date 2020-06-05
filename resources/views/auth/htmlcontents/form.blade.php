@@ -26,7 +26,7 @@
 
                     <div class="input-group row">
 
-                        <label for="title" class="col-sm-2 col-form-label">{{ $texthtml->loacte_code == 'SEO' ? }}meta
+                        <label for="title" class="col-sm-2 col-form-label">{{($texthtml->loacte_code == 'SEO') ? }}meta
                             title: {{ : }}Заголовок: </label>
                         <div class="col-sm-6">
                             @error('title')
