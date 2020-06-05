@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <h1>Редактировать текст {{ $texthtml->descr }}</h1>
+                    <h1>Редагувати текст {{ $texthtml->descr }}</h1>
                 </div>
                 <form method="POST" enctype="multipart/form-data" action="{{ route('texthtmls.update', $texthtml) }}">
                     @csrf
@@ -46,20 +46,24 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                             <input type="text" class="form-control" name="key_words" id="key_words"
-                                value="{{ old('title', isset($texthtml) ? $texthtml->key_words : null) }}">
+                                value="{{ old('key_words', isset($texthtml) ? $texthtml->key_words : null) }}">
                         </div>
                     </div>
                     @endif
-                    <div class="input-group row">@if ($texthtml->loacte_code == 'SEO')
+                    <div class="input-group row">
+                        @if ($texthtml->loacte_code == 'SEO')
                         <label for="content" class="col-sm-2 col-form-label">meta
                             description:</label>
+                        <input type="text" class="form-control" name="content" id="content"
+                            value="{{ old('content', isset($texthtml) ? $texthtml->content : null) }}">
                         @else
                         <label for="content" class="col-sm-2 col-form-label">Текст: </label>
-                        @endif
                         <div class="col-sm-6">
                             <textarea name="content" class="form-control" id="content"
                                 style="width: 100%">{{$texthtml->content}}</textarea>
                         </div>
+                        @endif
+
                     </div>
                     <button type="submit">Добавить</button>
                 </form>
