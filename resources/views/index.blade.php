@@ -1,6 +1,14 @@
 @extends('layouts/master')
 
-@section('title', 'Прокат та оренда інструменту у Львові')
+@section('title', $html->firstWhere("loacte_code", 'SEO')->title ? $html->firstWhere("loacte_code", 'SEO')->title :
+'Оренда інструментів у Львові і Львівській області | Орендувати ')
+@section('keywords', $html->firstWhere("loacte_code", 'SEO')->key_words ? $html->firstWhere("loacte_code",
+'SEO')->key_words : 'Оренда інструментів, Інструмент у Львові і Львівській
+області, Оренда ')
+@section('descr',$html->firstWhere("loacte_code", 'SEO')->content ? $html->firstWhere("loacte_code", 'SEO')->content :
+'Орендувати на день за найвигіднішими цінами у
+Львові та Львівській області.')
+
 @section('content')
 <div class="container-fluid">
     <div class="col-md-12">
