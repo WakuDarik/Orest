@@ -25,9 +25,11 @@
                     @method('PUT')
 
                     <div class="input-group row">
-
-                        <label for="title" class="col-sm-2 col-form-label">{{($texthtml->loacte_code == 'SEO') ? }}meta
-                            title: {{ : }}Заголовок: </label>
+                        @if ($texthtml->loacte_code == 'SEO')
+                        <label for="title" class="col-sm-2 col-form-label">title:</label>
+                        @else
+                        <label for="title" class="col-sm-2 col-form-label">Заголовок: </label>
+                        @endif
                         <div class="col-sm-6">
                             @error('title')
                             <div class="alert alert-danger">{{ $message }}</div>
@@ -48,10 +50,12 @@
                         </div>
                     </div>
                     @endif
-                    <div class="input-group row">
-                        <label for="content" class="col-sm-2 col-form-label">{{ $texthtml->loacte_code == 'SEO' ? }}meta
-                            description: {{ : }} Текст
-                        </label>
+                    <div class="input-group row">@if ($texthtml->loacte_code == 'SEO')
+                        <label for="content" class="col-sm-2 col-form-label">meta
+                            description:</label>
+                        @else
+                        <label for="content" class="col-sm-2 col-form-label">Текст: </label>
+                        @endif
                         <div class="col-sm-6">
                             <textarea name="content" class="form-control" id="content"
                                 style="width: 100%">{{$texthtml->content}}</textarea>
