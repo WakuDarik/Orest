@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Texthtml extends Model
 {
     protected $fillable = [
-        'title', 'content',
+        'title', 'content', 'key_words', 'h1',
     ];
 }
-
