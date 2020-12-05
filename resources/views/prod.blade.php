@@ -138,7 +138,7 @@
                             {{$prop->name}}
                         </div>
                         <div class="prop-value">
-                            {{$prop->pivot->unit}}, {{$prop->unit}}
+                            {{$prop->pivot->unit}} {{$prop->unit}}
                         </div>
                     </div>
                     @endif
