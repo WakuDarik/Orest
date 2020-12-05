@@ -95,9 +95,10 @@
                     </div>
                 </div>
                 <div class="btns">
-                    <a href="{{route('basket-add', $prod->id)}}"
-                        data-title="Настольная циркулярная пила GTS 10 J Professional"
-                        class="btn btn-red popup-toggle reserv-show"><span>Орендувати</span></a>
+                    {{-- <a href="{{route('basket-add', $prod->id)}}"
+                    data-title="Настольная циркулярная пила GTS 10 J Professional"
+                    class="btn btn-red popup-toggle reserv-show"><span>Орендувати</span></a> --}}
+                    <a href="#" class="btn btn-red open-modal" data-modal="rent-now"><span>Орендувати</span></a>
                     <a href="#" class="btn btn-success open-modal" data-modal="rent-now"><span>Подзвонити
                             менеджеру</span></a>
                 </div>
