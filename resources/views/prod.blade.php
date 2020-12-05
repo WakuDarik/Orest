@@ -1,11 +1,5 @@
 @extends('layouts/master')
 
-@section('title', $prod->meta_t ? $prod->meta_t : 'Оренда інструментів у Львові і Львівській області | Орендувати '.
-$prod->name)
-@section('keywords', $prod->meta_k ? $prod->meta_k : 'Оренда інструментів, Інструмент у Львові і Львівській
-області, Оренда ' . $prod->name)
-@section('descr', $prod->meta_d ? $prod->meta_d : 'Орендувати '.$prod->name.' на день за найвигіднішими цінами у
-Львові та Львівській області.')
 
 @section('content')
 

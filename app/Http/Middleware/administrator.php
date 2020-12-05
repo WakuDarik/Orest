@@ -24,3 +24,4 @@ class administrator
         return $next($request);
     }
 }
+

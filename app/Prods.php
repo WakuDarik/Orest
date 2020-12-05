@@ -46,7 +46,7 @@ class Prods extends Model
 
     public function propsProds()
     {
-        return $this->belongsToMany(Prop::class)->withPivot('unit')->withTimestamps();;
+        return $this->belongsToMany(Prop::class)->withPivot('unit')->withTimestamps();
     }
 
     public function getPriceForCount()
