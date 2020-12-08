@@ -1,4 +1,7 @@
 @extends('layouts/master')
+@section('title', $prod->meta_t ?? 'Оренда інструменту у Львові')
+@section('descr', $prod->meta_d ?? 'Оренда інструменту у Львові')
+@section('keywords', $prod->meta_k ?? 'Оренда інструменту у Львові')
 
 
 @section('content')
