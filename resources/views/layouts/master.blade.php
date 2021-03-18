@@ -193,7 +193,7 @@
 
     <footer id="footer"> <i class="car-delivery"><a href="dostavka.html"></a></i>
         <div class="inner"> <span class="copy">Прокат інструментів у Львові (будівельна техніка, садова техніка,
-                клінінгова техніка) ©2020</span>
+                клінінгова техніка) ©2021</span>
             <nav>
                 {{-- <a href="{{route('ysloviya-arendi')}}">Условия аренды</a> --}}
                 <a href="{{route('dostavka')}}">Доставка</a>
