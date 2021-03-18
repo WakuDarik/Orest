@@ -11,6 +11,7 @@ class Category extends Model
         'code',
         'description',
         'SEO_text',
+        'filtered',
         'iamge',
         'meta_t',
         'H1',

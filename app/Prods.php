@@ -10,6 +10,7 @@ class Prods extends Model
         'name',
         'code',
         'category_id',
+        'filtered',
         'price',
         'articul',
         'description',

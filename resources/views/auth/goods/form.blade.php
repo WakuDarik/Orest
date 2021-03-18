@@ -43,7 +43,11 @@
                                 value="{{ old('name', isset($good) ? $good->name : null) }}">
                         </div>
                     </div>
-
+                    <div class="input-group row">
+                        <label for="">Фильтр (где 1 - первый в списке, 999 - последний в списке)</label>
+                        <input type="number" name="filtered"
+                            value="{{ old('name', isset($good) ? $good->filtered  : null) }}">
+                    </div>
                     <div class="input-group row">
                         <label for="articul" class="col-sm-2 col-form-label">Артикул: </label>
                         <div class="col-sm-6">

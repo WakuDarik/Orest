@@ -50,7 +50,7 @@
 
                 <section class="img-catalog">
                     <div class="product-list small-filter">
-                        @foreach ($category->prods as $prod)
+                        @foreach ($category->prods->sortBy('filtered') as $prod)
                         @include('layouts/card', compact('prod'))
                         @endforeach
                     </div>

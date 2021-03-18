@@ -27,7 +27,11 @@
                         <input type="text" name="name"
                             value="{{ old('name', isset($category) ? $category->name  : null) }}">
                     </div>
-
+                    <div class="input-group row">
+                        <label for="">Фильтр (где 1 - первый в списке, 999 - последний в списке)</label>
+                        <input type="number" name="filtered"
+                            value="{{ old('name', isset($category) ? $category->filtered  : null) }}">
+                    </div>
                     <div class="input-group row"><label for="">Описание</label><textarea name="description" id=""
                             cols="30" rows="10">{{ old('description', isset($category) ? $category->description  : null) }}
                             </textarea>

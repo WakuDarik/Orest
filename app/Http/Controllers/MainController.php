@@ -14,7 +14,7 @@ class MainController extends Controller
     public function index()
     {
         $prods = Prods::get();
-        $categories = Category::get();
+        $categories = Category::orderby('filtered')->get();
         $html = Texthtml::get();
         return view('index', compact('categories', 'prods', 'html'));
     }
@@ -22,24 +22,24 @@ class MainController extends Controller
     {
         $html = Texthtml::get();
         $path = $request->route()->getName();
-        $categories = Category::get();
+        $categories = Category::orderby('filtered')->get();
         return view($path, compact('categories', 'html'));
     }
     public function categories()
     {
-        $categories = Category::get();
+        $categories = Category::orderby('filtered')->get();
         return view('categories', compact('categories'));
     }
     public function category($code)
     {
-        $categories = Category::get();
+        $categories = Category::orderby('filtered')->get();
         $category = Category::where('code', $code)->first();
         return view('category', compact('category', 'categories'));
     }
     public function prod($category, $prod)
     {
         $prod = Prods::where('code', $prod)->first();
-        $categories = Category::get();
+        $categories = Category::orderby('filtered')->get();
         return view('prod', compact('prod', 'categories'));
     }
 
