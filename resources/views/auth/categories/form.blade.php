@@ -33,6 +33,11 @@
                             </textarea>
                     </div>
 
+                    <div class="input-group row"><label for="">Описание внизу страницы</label><textarea name="SEO_text"
+                            id="" cols="30" rows="10">{{ old('SEO_text', isset($category) ? $category->SEO_text  : null) }}
+                    </textarea>
+                    </div>
+
                     <div class="input-group row">
                         <label for="">meta Заголовок</label>
                         <input type="text" name="meta_t"
@@ -60,4 +65,10 @@
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({selector:'textarea',plugins: "link",});
+</script>
+
 @endsection

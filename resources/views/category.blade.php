@@ -33,7 +33,7 @@
                 <div class="wysiwyg no-border">
                     <div class="inner " style="margin-bottom: 20px;">
                         <div class="" style="padding: 10px 0px;float: left;width: 100%;margin: 0 0 10px 0;">
-                            <p style="margin: 0;padding: 10px;">{{ $category->description}} </p>
+                            <p style="margin: 0;padding: 10px;">{!! $category->description !!} </p>
                         </div>
                     </div>
                 </div>
@@ -55,6 +55,14 @@
                         @endforeach
                     </div>
                 </section>
+            </div>
+            <div class="col-md-12">
+                <div class="wysiwyg">
+                    <div class="inner text-wrap">
+                        {!! $category->SEO_text !!}
+                    </div>
+                    </span>
+                </div>
             </div>
             {{-- <div class="col-md-12">
                 <div class="wysiwyg">
